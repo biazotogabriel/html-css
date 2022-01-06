@@ -1,0 +1,26 @@
+<div>
+    <div></div>
+    <div></div>
+</div>
+<style>
+    * {
+        background: #0B2429;
+    }
+    body > div {
+        position: relative;
+        left: 100%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    div > div {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #F3AC3C;
+    }
+    div > div:nth-child(2) {
+        margin: 0 -120px;
+        box-shadow: 60px -60px #998235;
+        border-top-right-radius: 0;
+    }
+</style>
