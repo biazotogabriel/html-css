@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronauta</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #espaco-container {
+        position: absolute;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+    #espaco {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(1.42 * max(100vh, 100vw));
+        transform: translate(-50%, -50%) rotate(45deg);
+        animation: espaco 500s infinite linear;
+    }
+    @keyframes espaco {
+        from {transform: translate(-50%, -50%) rotate(0deg);}
+        to {transform: translate(-50%, -50%) rotate(360deg);}
+    }
+    #astronauta-container {
+        position: absolute;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+    #astronauta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        max-width: 400px;
+        transform: translate(-50%, -50%);
+        animation: astronauta 250s infinite linear;
+    }
+    @keyframes espaco {
+        from {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+    @keyframes astronauta {
+        0% {
+            transform: translate(-50%, -50%) rotate(360deg) scale(1);
+        }
+        50% {
+            transform: translate(-50%, -50%) rotate(180deg) scale(0.2);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        }
+    }
+</style>
+<body>
+    <div id="espaco-container"><img id="espaco" src="imagens/espaco3-quadrado.jpg" alt="Espaco"></div>
+    <div id="astronauta-container"><img id="astronauta" src="imagens/astronauta.png" alt="Astronauta"></div>
+</body>
+</html>
